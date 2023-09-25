@@ -1,14 +1,19 @@
 import Image from "next/image.js"
 import { useState } from "react"
+import { useThemeContext } from "../../context/store.js";
 
 export default function LeftSidebar(){
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useThemeContext();
+
+    const changeOpen = () => {
+        setOpen(!open);
+    };
     return(
         <div className={(open?"" : " max-w-max items-center")+" slowly flex flex-col gap-4"}>
             <div className="glassmorph flex flex-col p-6 gap-6">
                 <div className="flex justify-between items-center text-white">
                     {open && <span className="font-bold text-lg">Facebook</span>}
-                    <div className="rounded-full icon-glassmorph p-3 cursor-pointer" onClick={()=>setOpen(!open)}>
+                    <div className="rounded-full icon-glassmorph p-3 cursor-pointer" onClick={changeOpen}>
                         <Image src={open ? '/images/menu-dots.svg' : '/images/circle-upright.svg'}
                         height={20}
                         width={20} />

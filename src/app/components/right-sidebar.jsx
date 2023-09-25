@@ -1,6 +1,10 @@
 import Image from "next/image.js"
+import { useThemeContext } from "../../context/store.js";
 
 export default function RightSidebar(){
+    const [open, setOpen] = useThemeContext();
+
+    console.log(open)
     return(
         <div className="glassmorph flex flex-col gap-4 p-5">
             <div className="flex gap-4 self-end">

@@ -75,5 +75,9 @@ body {
     transition: width 1s;
   }
 
+  .grid-anim{
+    grid-template-columns: 100px repeat(4, 1fr);
+  }
+
 
 }

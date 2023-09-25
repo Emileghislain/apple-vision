@@ -1,6 +1,8 @@
 import Image from "next/image.js"
+import { useThemeContext } from '@/context/store.js'
 
 export default function Feeds(){
+    const [open, setOpen] = useThemeContext();
     return(
         <div className="glassmorph flex flex-col p-6 gap-5">
             <div className="your flex flex-col p-8 rounded-[2rem] gap-5 text-white font-light">
@@ -90,7 +92,7 @@ export default function Feeds(){
                     <span>
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                     </span>
-                    <Image src={'/images/pexels-tara-winstead-6479584.jpg'} className="rounded-[24px]" width={670} height={500} loading="lazy"/>
+                    <Image src={'/images/pexels-tara-winstead-6479584.jpg'} className="rounded-[24px]" width={open ? 670 : 1200} height={500} loading="lazy"/>
                 </div>
                 <div className="flex justify-between text-[10px]">
                     <div className="flex items-center gap-1">
