@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-image: url('/images/pexels-curtis-adams-3773582 1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@layer utilities{
+  .glassmorph{
+    backdrop-filter: blur(100px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 2px -1px 2px rgba(255,255,255,0.1);
+    /* background-color: rgba(255, 255, 255, 0.05); */
+    border-radius: 2rem;
+  }
+
+  .icon-glassmorph{
+    backdrop-filter: blur(100px);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .icon-glassmorph-next{
+    backdrop-filter: blur(90px);
+    background-color: rgba(255, 255, 255, 0.01);
+  }
+
+  .your{
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.08);
+  }  
+
+  .storie-image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+    height: 200px;
+    width: 118px;
+    position: relative;
+  }
+
+  .storie-image-circle{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .slowly{
+    transition: width 1s;
+  }
+
+
+}
