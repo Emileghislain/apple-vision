@@ -54,8 +54,24 @@ body {
     background-size: cover;
     border-radius: 1rem;
     height: 200px;
-    width: 118px;
+    width: 120px;
     position: relative;
+  }
+
+  .storie{
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.25rem;
+  }
+
+  .storie-open{
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0.25rem;
+  }
+
+  .storie-image:hover:not(:first-child) {
+    height: 200px;
+    width: 220px;
+    transition: all 500ms ease;
   }
 
   .storie-image-circle{
@@ -71,13 +87,17 @@ body {
     left: 1rem;
   }
 
-  .slowly{
-    transition: width 1s;
-  }
-
   .grid-anim{
-    grid-template-columns: 100px repeat(4, 1fr);
+    grid-template-columns: 80px repeat(4, 1fr);
   }
 
+  .create-storie{
+    background-color: #222228;
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
+
+  .animtransition{
+    transition: all ease 2000ms;
+  }
 
 }
